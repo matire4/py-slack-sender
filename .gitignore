@@ -1,0 +1,19 @@
+# Entorno Virtual de Python
+env/
+
+# Archivos de configuración y datos sensibles
+# ¡NUNCA SUBIR ESTOS ARCHIVOS A GITHUB!
+vendedores.json
+user_id_prueba.json
+consumos.txt
+*.pdf
+pdfs/
+
+# Archivos temporales y de caché
+__pycache__/
+temp_image.jpg
+*.pyc
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
