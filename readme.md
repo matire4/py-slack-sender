@@ -87,20 +87,22 @@ slack_sdk
 pip install -r requirements.txt
 ```
 
-4. Configura tu Bot y Archivos:
+#### 4. Configura tu Bot y Archivos:
 
-A. Crear el Bot en Slack
-    1. Ve a https://api.slack.com/apps y crea una nueva aplicación.
-    2. En "OAuth & Permissions" -> "Scopes", añade los siguientes permisos de Bot:
-        - groups:history (para leer mensajes en canales privados)
-        - files:read (para leer información de archivos)
-        - files:write (para subir/reenviar archivos)
-        - chat:write (para enviar mensajes)
-        - im:write (para iniciar mensajes directos)
-    3. Instala la aplicación en tu workspace y copia el "Bot User OAuth Token" (empieza con xoxb-).
-    4. Invita a tu bot al canal privado que usarás para subir los archivos. (@[Nombre del bot])
-    
-B. Configurar las Variables de Entorno (Método Seguro para el Token) 
+**A. Crear el Bot en Slack**
+
+1.  Ve a `https://api.slack.com/apps` y crea una nueva aplicación.
+2.  En "OAuth & Permissions" -> "Scopes", añade los siguientes permisos de Bot:
+    -   `groups:history` (para leer mensajes en canales privados)
+    -   `files:read` (para leer información de archivos)
+    -   `files:write` (para subir/reenviar archivos)
+    -   `chat:write` (para enviar mensajes)
+    -   `im:write` (para iniciar mensajes directos)
+3.  Instala la aplicación en tu workspace y copia el "Bot User OAuth Token" (empieza con `xoxb-`).
+4.  Invita a tu bot al canal privado que usarás para subir los archivos (`@[Nombre del bot]`).
+
+**B. Configurar las Variables de Entorno (Método Seguro para el Token)**
+
 Para evitar exponer tu token, no lo escribiremos en el código. En su lugar, lo configuraremos como una variable de entorno en tu terminal cada vez que vayas a ejecutar el script.
 
 En Windows (PowerShell):
@@ -114,8 +116,8 @@ export SLACK_BOT_TOKEN="PEGA-AQUI-EL-NUEVO-TOKEN-QUE-ACABAS-DE-COPIAR"
 ```
 (El script ya está preparado para leer esta variable. No necesitas modificar el código Python para esto)
 
-C. Configurar Archivos Locales
-    JSON de Vendedores: Crea y rellena el archivo vendedores.json con los nombres y los IDs de usuario (UID) de Slack de cada vendedor.
+**C. Configurar Archivos Locales**
+JSON de Vendedores: Crea y rellena el archivo vendedores.json con los nombres y los IDs de usuario (UID) de Slack de cada vendedor.
 
 ---
 
